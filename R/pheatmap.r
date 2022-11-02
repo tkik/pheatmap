@@ -585,7 +585,7 @@ generate_annotation_colours = function(annotation, annotation_colors, drop){
         }
     }
     
-    factor_colors = dscale(factor(1:count), ggsci::pal_igv("default")(51))
+    factor_colors = ggsci::pal_igv("default")(51)[1:count]
     
     oldseed = NULL 
     if (exists(".Random.seed")) 
